@@ -1,0 +1,105 @@
+import lc3b_types::*;
+
+module mp2
+(
+    input clk,
+
+    /* Memory signals */
+    input mem_resp,
+    input lc3b_word mem_rdata,
+    output mem_read,
+    output mem_write,
+    output lc3b_mem_wmask mem_byte_enable,
+    output lc3b_word mem_address,
+    output lc3b_word mem_wdata
+);
+
+/* Instantiate MP 0 top level blocks here */
+
+logic load_pc;
+logic load_ir;
+logic load_regfile;
+logic load_mar;
+logic load_mdr;
+logic load_cc;
+
+logic [2:0] pcmux_sel;
+logic storemux_sel;
+logic [2:0] alumux_sel;
+logic [2:0] regfilemux_sel;
+logic [2:0] marmux_sel;
+logic mdrmux_sel;
+
+lc3b_aluop aluop;
+lc3b_opcode opcode;
+logic branch_enable;
+
+logic immCheck;
+logic jsrCheck;
+logic r7_sel;
+logic shf_a;
+logic shf_d;
+
+control controller
+(
+	.clk(clk),
+	.opcode(opcode),
+	.branch_enable(branch_enable),
+	.load_pc(load_pc),
+	.load_ir(load_ir),
+	.load_regfile(load_regfile),
+	.load_mar(load_mar),
+	.load_mdr(load_mdr),
+	.load_cc(load_cc),
+	.pcmux_sel(pcmux_sel),
+	.storemux_sel(storemux_sel),
+	.alumux_sel(alumux_sel),
+	.regfilemux_sel(regfilemux_sel),
+	.marmux_sel(marmux_sel),
+	.mdrmux_sel(mdrmux_sel),
+	.aluop(aluop),
+	.mem_resp(mem_resp),
+	.mem_read(mem_read),
+	.mem_write(mem_write),
+	.mem_byte_enable(mem_byte_enable),
+	.immCheck(immCheck),
+	.jsrCheck(jsrCheck),
+	.r7_sel(r7_sel),
+	.mem_address(mem_address),
+	.shf_a(shf_a),
+	.shf_d(shf_d)
+);
+
+datapath lc3b
+(
+	.clk(clk),
+	.load_pc(load_pc),
+   .load_ir(load_ir),
+   .load_regfile(load_regfile),
+   .load_mar(load_mar),
+   .load_mdr(load_mdr),
+   .load_cc(load_cc),
+	.pcmux_sel(pcmux_sel),
+	.storemux_sel(storemux_sel),
+	.alumux_sel(alumux_sel),
+   .regfilemux_sel(regfilemux_sel),
+   .marmux_sel(marmux_sel),
+   .mdrmux_sel(mdrmux_sel),
+   .aluop(aluop),
+   .branch_enable(branch_enable),
+   .mem_rdata(mem_rdata),
+   .mem_address(mem_address),
+   .mem_wdata(mem_wdata),
+   .opcode(opcode),
+	.immCheck(immCheck),
+	.jsrCheck(jsrCheck),
+	.r7_sel(r7_sel),
+	.shf_a(shf_a),
+	.shf_d(shf_d)
+);
+
+
+
+
+
+endmodule : mp2

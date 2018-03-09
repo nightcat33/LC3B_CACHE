@@ -1,0 +1,333 @@
+# do mp2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/wishbone.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling interface wishbone
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/lc3b_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lc3b_types
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/plus2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module plus2
+# 
+# Top level modules:
+# 	plus2
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/mux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/cacheControl.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cacheControl_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cacheControl
+# 
+# Top level modules:
+# 	cacheControl
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/cacheDatapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cacheDatapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cacheDatapath
+# 
+# Top level modules:
+# 	cacheDatapath
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/Array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package Array_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module Array
+# 
+# Top level modules:
+# 	Array
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/Comparator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Comparator
+# 
+# Top level modules:
+# 	Comparator
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/mux8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8
+# 
+# Top level modules:
+# 	mux8
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/adj.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adj_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adj
+# 
+# Top level modules:
+# 	adj
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package alu_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/gencc.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package gencc_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module gencc
+# 
+# Top level modules:
+# 	gencc
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/ir.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ir_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module ir
+# 
+# Top level modules:
+# 	ir
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/regfile.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package regfile_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adder_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/nzp.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package nzp_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module nzp
+# 
+# Top level modules:
+# 	nzp
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/sign_extend.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package sign_extend_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	sign_extend
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/unadj.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package unadj_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module unadj
+# 
+# Top level modules:
+# 	unadj
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/unsign_extend.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package unsign_extend_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module unsign_extend
+# 
+# Top level modules:
+# 	unsign_extend
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/CPU.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package CPU_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/Cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package Cache_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module Cache
+# 
+# Top level modules:
+# 	Cache
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/mp2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mp2
+# 
+# Top level modules:
+# 	mp2
+# 
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/mp2_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mp2_tb
+# 
+# Top level modules:
+# 	mp2_tb
+# vlog -sv -work work +incdir+/home/ketian2/ece411/mp2 {/home/ketian2/ece411/mp2/physical_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module physical_memory
+# 
+# Top level modules:
+# 	physical_memory
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp2_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp2_tb 
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.wishbone
+# Loading work.mp2
+# Loading work.lc3b_types
+# Loading work.CPU_sv_unit
+# Loading work.CPU
+# Loading work.mux8
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.sign_extend_sv_unit
+# Loading work.sign_extend
+# Loading work.unsign_extend_sv_unit
+# Loading work.unsign_extend
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.mux2
+# Loading work.mux4
+# Loading work.nzp_sv_unit
+# Loading work.nzp
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.register
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.unadj_sv_unit
+# Loading work.unadj
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.plus2
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.Cache_sv_unit
+# Loading work.Cache
+# Loading work.cacheControl_sv_unit
+# Loading work.cacheControl
+# Loading work.cacheDatapath_sv_unit
+# Loading work.cacheDatapath
+# Loading work.Array_sv_unit
+# Loading work.Array
+# Loading work.Comparator
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ketian2/ece411/mp2/datapath.sv(102): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'in'. The port definition is at: /home/ketian2/ece411/mp2/unsign_extend.sv(5).
+#         Region: /mp2_tb/dut/lc3/lc3b/memw_unsign
+# ** Warning: (vsim-3017) /home/ketian2/ece411/mp2/datapath.sv(169): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /mp2_tb/dut/lc3/lc3b/alumux
+# ** Warning: (vsim-3015) /home/ketian2/ece411/mp2/datapath.sv(169): [PCDPC] - Port size (16 or 16) does not match connection size (4) for port 'd'. The port definition is at: /home/ketian2/ece411/mp2/mux4.sv(4).
+#         Region: /mp2_tb/dut/lc3/lc3b/alumux
+# ** Warning: (vsim-3722) /home/ketian2/ece411/mp2/datapath.sv(169): [TFMPC] - Missing connection for port 'e'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+restart -f
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.wishbone
+# Loading work.mp2
+# Loading work.lc3b_types
+# Loading work.CPU_sv_unit
+# Loading work.CPU
+# Loading work.mux8
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.sign_extend_sv_unit
+# Loading work.sign_extend
+# Loading work.unsign_extend_sv_unit
+# Loading work.unsign_extend
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.mux2
+# Loading work.mux4
+# Loading work.nzp_sv_unit
+# Loading work.nzp
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.register
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.unadj_sv_unit
+# Loading work.unadj
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.plus2
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.Cache_sv_unit
+# Loading work.Cache
+# Loading work.cacheControl_sv_unit
+# Loading work.cacheControl
+# Loading work.cacheDatapath_sv_unit
+# Loading work.cacheDatapath
+# Loading work.Array_sv_unit
+# Loading work.Array
+# Loading work.Comparator
+# Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/ketian2/ece411/mp2/datapath.sv(102): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'in'. The port definition is at: /home/ketian2/ece411/mp2/unsign_extend.sv(5).
+#         Region: /mp2_tb/dut/lc3/lc3b/memw_unsign
+# ** Warning: (vsim-3017) /home/ketian2/ece411/mp2/datapath.sv(169): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /mp2_tb/dut/lc3/lc3b/alumux
+# ** Warning: (vsim-3015) /home/ketian2/ece411/mp2/datapath.sv(169): [PCDPC] - Port size (16 or 16) does not match connection size (4) for port 'd'. The port definition is at: /home/ketian2/ece411/mp2/mux4.sv(4).
+#         Region: /mp2_tb/dut/lc3/lc3b/alumux
+# ** Warning: (vsim-3722) /home/ketian2/ece411/mp2/datapath.sv(169): [TFMPC] - Missing connection for port 'e'.
+run 70000ns
+write list -window .main_pane.list.interior.cs.body /home/ketian2/mp2.lst

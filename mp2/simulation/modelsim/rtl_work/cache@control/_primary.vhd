@@ -1,0 +1,41 @@
+library verilog;
+use verilog.vl_types.all;
+entity cacheControl is
+    port(
+        clk             : in     vl_logic;
+        s_cyc           : in     vl_logic;
+        s_stb           : in     vl_logic;
+        mem_resp        : out    vl_logic;
+        mem_read        : in     vl_logic;
+        mem_write       : in     vl_logic;
+        physocal_mem_write: out    vl_logic;
+        m_cyc           : out    vl_logic;
+        m_stb           : out    vl_logic;
+        m_ack           : in     vl_logic;
+        m_retry         : in     vl_logic;
+        hitA            : in     vl_logic;
+        hitB            : in     vl_logic;
+        valid_bit_A     : in     vl_logic;
+        valid_bit_B     : in     vl_logic;
+        dirty_bit_A     : in     vl_logic;
+        dirty_bit_B     : in     vl_logic;
+        lru_out         : in     vl_logic;
+        array_sel       : out    vl_logic;
+        mem_address_sel : out    vl_logic;
+        cache_in_sel    : out    vl_logic;
+        loadLRU         : out    vl_logic;
+        loadValidBitArrayA: out    vl_logic;
+        loadValidBitArrayB: out    vl_logic;
+        loadTagArrayA   : out    vl_logic;
+        loadTagArrayB   : out    vl_logic;
+        loadDirtyBitArrayA: out    vl_logic;
+        loadDirtyBitArrayB: out    vl_logic;
+        loadDataArrayA  : out    vl_logic;
+        loadDataArrayB  : out    vl_logic;
+        valid_bit       : out    vl_logic;
+        dirty_bit       : out    vl_logic;
+        lru_bit         : out    vl_logic;
+        sel             : out    vl_logic_vector(15 downto 0);
+        sel_signal      : in     vl_logic_vector(15 downto 0)
+    );
+end cacheControl;

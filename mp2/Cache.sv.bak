@@ -1,0 +1,55 @@
+import lc3b_types::*;
+
+module Cache (
+	input clk,    // Clock
+
+	// signals communicate with lc3b
+	input lc3b_word mem_address,
+	input lc3b_word mem_wdata,
+	input lc3b_mem_wmask mem_byte_enable,
+	output lc3b_word mem_rdata,
+
+	// signals communicate with actual memory
+	// one cache line is 128 bits
+	// address is 16 bits
+	// byte addressable
+	input logic [127:0] rdata,
+	output lc3b_word address,
+	output logic [127:0] wdata,
+	
+	// cache control signals
+	output logic hitA,
+	output logic hitB,
+
+	input loadLRU,
+
+	input loadValidBitArrayA,
+	input loadValidBitArrayB,
+
+	input loadTagArrayA,
+	input loadTagArrayB,
+
+	input loadDirtyBitArrayA,
+	input loadDirtyBitArrayB,
+
+	input loadDataArrayA,
+	input loadDataArrayB,
+
+	input valid_bit,
+	input dirty_bit,
+	input lru_bit,
+
+	output logic lru_out,
+
+	output logic valid_bit_A,
+	output logic valid_bit_B,
+	output logic dirty_bit_A,
+	output logic dirty_bit_B
+
+	input array_sel,
+	input mem_address_sel,
+	input cache_in_sel
+
+);
+
+endmodule : Cache
