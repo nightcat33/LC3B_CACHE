@@ -1,0 +1,57 @@
+ORIGIN 0
+SEGMENT 0 CODE:
+	LDR R1, R0, l1p
+	LDR R2, R0, l2p
+	LDR R3, R0, l3p
+	LDR R4, R0, STORE
+
+	ADD R2, R2, 3
+	STR R2, R4, 0
+
+	LDR R5, R4, 0
+	ADD R5, R5, 3
+	STR R5, R4, 0
+	LDR R6, R4, 0
+	
+
+inf:
+	BRnzp inf
+
+l1p:	DATA2 line1
+l2p:	DATA2 line2
+l3p:	DATA2 line3
+
+SEGMENT 32 line1:
+X:	DATA2 4x1111
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+
+SEGMENT 128 line2:
+Y:	DATA2 4x2222
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+SEGMENT 128 line3:
+Z:	DATA2 4x3333
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+STORE:	DATA2 0;
+
+
